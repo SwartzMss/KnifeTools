@@ -4,11 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [features]
-default = ["clap","tokio"]
+default = []
 
 [dependencies]
-clap = { version = "4.5.17", features = ["derive"], optional = true}
-tokio = { version = "1", features = ["full"], optional = true }
+clap = { version = "4.5.17", features = ["derive"]}
+tokio = { version = "1", features = ["full"]}
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["fmt", "env-filter", "chrono"] }
 
 [[bin]]
 name = "LogSpliter"
