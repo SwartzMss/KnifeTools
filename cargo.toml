@@ -1,0 +1,16 @@
+[package]
+name = "KnifeTools"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["clap","tokio"]
+
+[dependencies]
+clap = { version = "4.5.17", features = ["derive"], optional = true}
+tokio = { version = "1", features = ["full"], optional = true }
+
+[[bin]]
+name = "LogSpliter"
+path = "LogSpliter/main.rs"
+
